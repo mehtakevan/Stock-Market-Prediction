@@ -6,3 +6,4 @@ scikit-learn
 keras
 yfinance
 pydantic
+tensorflow
