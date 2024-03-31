@@ -138,9 +138,11 @@ app.add_middleware(
     allow_headers=["*"],  # Change this to your desired list of HTTP headers
 )
 
-@app.post("/")
+@app.post("/prediction")
 def root(stock:Stock):
     return(run_lstm_model(stock.symbol))
 
-
+@app.get("/")
+def fun():
+    return "Hi from stock prediction"
     
